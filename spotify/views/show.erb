@@ -1,0 +1,29 @@
+<a href="/">Back to search</a>
+
+<div>
+  <h1><%= @artist['name'] %></h1>
+  <br>
+  <a href="/artists/?id=<%= @artist['id']%>">
+    <img src=<%="#{@artist_image_url}"%> alt="">
+  </a>
+  <br>
+  <% if @related_artists.any? %>
+    <h2>Related Artists</h2>
+    <% @related_artists.take(5).each do |artist| %>
+      <br>
+      <%= artist['name'] %>
+      <br>
+      <% if artist['images'].any? %>
+        <a href="/artists/?id=<%= artist['id']%>">
+          <img src=<%="#{artist['images'].first['url']}"%> alt="">
+        </a>
+      <% else %>
+        <a href="/artists/?id=<%= artist['id']%>">
+          <img src="http://i.dailymail.co.uk/i/pix/2016/05/11/10/34091E0A00000578-3584384-image-a-8_1462957988141.jpg" alt="">
+        </a>
+      <% end %>
+    <% end %>
+  <% else %>
+    No related artists
+  <% end %>
+</div>

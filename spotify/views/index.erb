@@ -1,0 +1,24 @@
+<form>
+  <input type="text" name="name" placeholder="Search for an artist"><br>
+</form>
+
+<div>
+  <% if @artists %>
+    <h1>Search results</h1>
+    <a href="/">New search</a>
+    <div>
+      <% @artists.take(5).each do |artist| %>
+        <p><%= artist['name'] %></p>
+        <% if artist['images'].any? %>
+          <a href="/artists/?id=<%= artist['id']%>">
+            <img src=<%="#{artist['images'].first['url']}"%> alt="">
+          </a>
+        <% else %>
+          <a href="/artists/?id=<%= artist['id']%>">
+            <img src="http://i.dailymail.co.uk/i/pix/2016/05/11/10/34091E0A00000578-3584384-image-a-8_1462957988141.jpg" alt="">
+          </a>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+</div>
