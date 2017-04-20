@@ -3,11 +3,16 @@
 </ul>
 
 <div>
-  <div class="jumbotron">
+  <div class="jumbotron artist-section">
     <h1><%= @artist['name'] %></h1>
     <br>
     <a href="/artists/?id=<%= @artist['id']%>">
       <img src=<%="#{@artist_image_url}"%> alt="">
+    </a>
+    <br>
+    <br>
+    <a target="_blank" href=<%= @artist['external_urls']['spotify'] %> class="btn btn-success">
+      Listen on Spotify
     </a>
   </div>
 
@@ -29,7 +34,7 @@
                   </a>
                 <% else %>
                   <a href="/artists/?id=<%= artist['id']%>">
-                    <img src="http://i.dailymail.co.uk/i/pix/2016/05/11/10/34091E0A00000578-3584384-image-a-8_1462957988141.jpg" alt="">
+                    <img src="http://i.dailymail.co.uk/i/pix/2016/05/11/10/34091E0A00000578-3584384-image-a-8_1462957988141.jpg" alt="default-image">
                   </a>
                 <% end %>
               </div>
