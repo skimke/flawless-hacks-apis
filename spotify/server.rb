@@ -3,7 +3,6 @@
 # In your browser, go to `localhost:4567`
 
 require 'sinatra'
-require 'byebug'
 require 'net/http'
 require 'json'
 
