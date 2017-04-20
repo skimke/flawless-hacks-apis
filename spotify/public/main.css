@@ -8,3 +8,10 @@ img {
     text-align: center;
 }
 
+.app-title {
+    font-size: 80px;
+}
+
+.app-title:hover {
+    text-decoration: none;
+}
