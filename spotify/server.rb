@@ -3,14 +3,13 @@
 # In your browser, go to `localhost:4567`
 
 require 'sinatra'
-require 'byebug'
 require 'net/http'
 require 'json'
 
 BASE_URI = 'https://api.spotify.com'
 
 get '/' do
-  if params['name']
+  if params['name'] && !params['name'].empty?
     @artists = artist_search(params['name'])
   end
 
