@@ -1,7 +1,8 @@
 # Working with APIs
+[Link to presentation](https://docs.google.com/presentation/d/1WJ7uHaDXkmtHKsdiMybaq28APJk1QyHxzRhfREJQ8l8/edit?usp=sharing)
 
 Thanks for coming out and seeing our talk at [Flawless Hacks 2017](http://flawlesshacks.com)!
-This is the JavaScript codebase for the Working with APIs workshop examples.
+This is the JavaScript and Ruby codebase for the Working with APIs workshop examples.
 
 Open up one of the project folders, and its `index.html` file with your browser to see them work in action.
 
