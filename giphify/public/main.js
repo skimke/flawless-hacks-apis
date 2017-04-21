@@ -1,6 +1,7 @@
 $(function(){
-  var giphyBaseUrl = 'http://api.giphy.com/';
-  var publicKey = 'dc6zaTOxFJmzC';
+  // this function runs when the browser renders the javascript file
+  var giphyBaseUrl = 'http://api.giphy.com/'; // base URL for giphy API
+  var publicKey = 'dc6zaTOxFJmzC'; // their public key - if it's private, please do not leave this in a file like this, exposed.
 
 	var imageSearchUrl = giphyBaseUrl + 'v1/gifs/search';
   var url = imageSearchUrl + '?q=funny+cat&limit=5&api_key=' + publicKey;
