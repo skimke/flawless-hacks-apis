@@ -4,7 +4,7 @@ $(function(){
   var publicKey = 'dc6zaTOxFJmzC'; // their public key - if it's private, please do not leave this in a file like this, exposed.
 
 	var imageSearchUrl = giphyBaseUrl + 'v1/gifs/search';
-  var url = imageSearchUrl + '?q=funny+cat&limit=5&api_key=' + publicKey;
+  var url = imageSearchUrl + '?q=funny+cat&limit=10&api_key=' + publicKey;
   var renderhtml = '<ul class="results-list">';
 
 	requestJSON(url, function(json) {
@@ -35,7 +35,7 @@ $(function(){
         var imageResult = imageResults[index];
         var gifUrl = imageResult.images.original.url;
 
-				renderhtml = renderhtml + '<li><img class="avatar" src="'+gifUrl+'"></li>';
+				renderhtml = renderhtml + '<li><div class="giphify-result" style="background-image: url(\''+gifUrl+'\')"></div></li>';
 			});
 
 			renderhtml + '</ul>';
@@ -43,7 +43,6 @@ $(function(){
 			renderhtml = '<p>There are no results.</p>';
 		}
 
-		renderhtml = renderhtml;
 		$('.results').html(renderhtml);
 	}
 });
